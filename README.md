@@ -1,4 +1,5 @@
 
+
 # PDF-Based RAG Chatbot
 
 ## Project Description
@@ -50,3 +51,40 @@ python rag_chatbot.py
 ## Author
 AI & Data Science Project
 
+## 🔑 Configure Gemini API Key
+
+To run this project, you need your own Gemini API key.
+
+**Step 1:** Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
+
+**Step 2:** Set the environment variable before running the application.
+
+**For Google Colab:**
+
+```python
+from getpass import getpass
+import os
+
+os.environ["GEMINI_API_KEY"] = getpass("Enter your Gemini API Key: ")
+```
+
+**For Windows:**
+
+```python
+import os
+os.environ["GEMINI_API_KEY"] = "YOUR_GEMINI_API_KEY"
+```
+
+**Step 3:** Install the required packages.
+
+```bash
+pip install -r requirements.txt
+```
+
+**Step 4:** Run the application.
+
+```bash
+python rag_chatbot.py
+```
+
+**Note:** Never share or upload your personal Gemini API key to GitHub. Each user must use their own API key.
