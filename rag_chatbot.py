@@ -15,7 +15,8 @@ MODEL_NAME = "gemini-3.5-flash"
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    raise ValueError("Please set your GEMINI_API_KEY.")
+    from getpass import getpass
+    api_key = getpass("Enter your Gemini API key: ")
 
 client = genai.Client(api_key=api_key)
 
